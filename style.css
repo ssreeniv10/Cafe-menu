@@ -1,0 +1,33 @@
+body {
+    display: grid;
+    place-items: center;
+    
+}
+
+body::before{
+    content: ""; /* required for psuedo elements like before, after to appear*/ 
+    position:absolute; /* absolute makes the element independent of normal document flow otherwise it would just behave like inline content*/
+    top:0;
+    bottom:0;
+    width:100%;
+    height:100%; /* Ensures the element covers the entire page*/ 
+    background-image: url("/cafe%20menu/assets/3717295073_f5ae257d71_o.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    z-index: -1; /* pushes the background behind the text*/
+}
+
+body > table { 
+    border-collapse: collapse;
+    margin:10%;
+    background-color:burlywood;
+    min-width:40%;
+    max-width:75%;
+    min-height:90%;
+}
+
+td, th{
+    padding: 2.5px 70px 2.5px 70px;
+}
